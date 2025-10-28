@@ -1,9 +1,11 @@
-def add(a, b):
-    return a + b
+import sys
+import os
 
-def subtract(a, b):
-    return a - b
+# 현재 파일 위치 기준으로 src 폴더 경로를 sys.path에 추가
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
+
+from app import add,subtract
 
 def test_add():
     assert add(2, 3) == 5
